@@ -1,0 +1,27 @@
+<script type="text/javascript">
+
+	$(document).on('ready', function() {
+		var main = $('main');
+
+		function getQuote() {
+			$.ajax({
+				type: 'get',
+				dataType: 'json',
+				url: '/api/json',
+				success: function(data) {
+					console.log(data);
+					$(main).html($('<p class="quote">' + data + '</p>'));
+				}
+
+			});			
+		}
+
+		getQuote();
+
+		$('body').on('click', function() {
+			getQuote()
+		});
+		
+	});
+
+</script>
