@@ -16,13 +16,17 @@ body {
 }
 
 @keyframes smoothFadeIn {
-  0% { transform: translateY(200px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% { transform: translateY(400%) translateX(-50%); opacity: 0; }
+  100% { transform: translateY(-100%) translateX(-50%); opacity: 1; }
 }
 
 p.quote {
-	margin:4em auto;
-	max-width:30em;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:20em;
+	transform:translateX(-100%);
+	font-size:2em;
 	animation-name:smoothFadeIn;
 	animation-duration:1.5s;
 	animation-fill-mode:forwards;
