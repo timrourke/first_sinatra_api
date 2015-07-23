@@ -2,5 +2,5 @@ require 'bundler'
 Bundler.require()
 
 get '/' do 
-	'Hello world!'
+	{:name => 'Tim', :message => 'Hello world!'}.to_json
 end
