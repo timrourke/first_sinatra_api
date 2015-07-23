@@ -6,5 +6,5 @@ get '/' do
 end
 
 get '/api/awesome'
-	{:everyone => 'is awesome', :tegan_and_sara => 'not a fan'}
+	{:everyone => 'is awesome', :tegan_and_sara => 'not a fan'}.to_json
 end
