@@ -24,10 +24,58 @@ p.quote {
 	position:absolute;
 	top:50%;
 	left:50%;
-	width:20em;
+	width:90%;
+	max-width:20em;
 	transform:translateX(-100%);
 	font-size:2em;
 	animation-name:smoothFadeIn;
 	animation-duration:1.5s;
 	animation-fill-mode:forwards;
+}
+
+.site-footer {
+  position:absolute;
+  bottom:1em;
+  right:1em;
+}
+
+.site-footer a {
+	transition:all 0.3s ease-in-out;
+	color:rgba(255,255,255,0.125);
+}
+
+.site-footer .personal-site-link {
+	position:relative;
+	top:-0.15em;
+}
+
+.site-footer .contact ul {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+.site-footer .contact li {
+  float:left;
+  margin-right:0.75em;
+}
+
+.site-footer .contact .icon {
+  width:1em;
+  height:1em;
+  fill:rgba(255,255,255,0.125);
+}
+
+.site-footer .contact .icon:hover,
+.site-footer a:hover {
+  fill:white;
+  color:white;
+}
+
+.icon {
+  transition:all 0.3s ease-in-out;
+}
+
+.icon:hover {
+	transform:scale(1.12);
 }
