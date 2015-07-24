@@ -1,5 +1,9 @@
 <script type="text/javascript">
 
+	String.prototype.splice = function( idx, s ) {
+    return (this.slice(0,idx) + s + this.slice(idx + 1));
+	};
+
 	$(document).on('ready', function() {
 		var main = $('main');
 
@@ -9,7 +13,10 @@
 				dataType: 'json',
 				url: '/api/json',
 				success: function(data) {
-					console.log(data);
+					//Prevent orphans
+					var lastSpace = data.lastIndexOf(' ');
+					data = data.splice(lastSpace, '&nbsp;');
+
 					$(main).html($('<p class="quote">' + data + '</p>'));
 				}
 
